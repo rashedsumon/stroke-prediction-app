@@ -46,7 +46,9 @@ with st.form("prediction_form"):
         bmi = st.number_input("Body Mass Index (BMI)", min_value=10.0, max_value=70.0, value=25.0)
         smoking_status = st.selectbox("Smoking Profile", options=["never smoked", "formerly smoked", "smokes", "Unknown"])
 
-    submit_button = st.form_submit_with_button("Analyze Stroke Risk")
+    # Fixed line here:
+    submit_button = st.form_submit_button("Analyze Stroke Risk")
+
 
 if submit_button:
     # 1. Transform user input to match the structure of the training dataset

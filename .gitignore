@@ -1,0 +1,12 @@
+# Local virtual environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Data and Models
+*.csv
+stroke_model.pkl
+
+# Streamlit config
+.streamlit/

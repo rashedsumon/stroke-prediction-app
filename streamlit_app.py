@@ -18,7 +18,7 @@ def load_cached_model():
 try:
     with st.spinner("Initializing dataset and predictive model..."):
         model_pipeline = load_cached_model()
-    st.success("System Ready for Assessments!")
+    
 except Exception as e:
     st.error(f"Failed to load/train model. Error logs: {e}")
     st.stop()

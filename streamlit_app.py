@@ -7,7 +7,7 @@ from model import get_or_train_model
 # Page configurations
 st.set_page_config(page_title="Stroke Risk Predictor", layout="centered", page_icon="🧠")
 
-st.title("🧠 Stroke Prediction & Risk Assessment App")
+st.title("🧠 Stroke Prediction")
 st.write("This app uses a Machine Learning model trained on clinical and lifestyle data to predict the likelihood of experiencing a stroke.")
 
 # Load or auto-train the model pipeline in the background
@@ -34,7 +34,7 @@ with st.form("prediction_form"):
     
     with col1:
         gender = st.selectbox("Gender", options=["Male", "Female", "Other"])
-        age = st.number_input("Age", min_value=0.0, max_value=120.0, value=45.0, step=1.0)
+        age = st.number_input("Age", min_value=0.0, max_value=120.0, value=45.0)
         hypertension = st.selectbox("Hypertension (High Blood Pressure)?", options=["No", "Yes"])
         heart_disease = st.selectbox("History of Heart Disease?", options=["No", "Yes"])
         ever_married = st.selectbox("Ever Married?", options=["Yes", "No"])
